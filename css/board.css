@@ -1,0 +1,301 @@
+#sub_visual{
+    position: relative;
+    top:100px;
+    height: 150px;
+}
+
+.sub_visual{
+    height: 100%;
+    background:url(../img/fans.jpg) no-repeat;
+    background-size:cover;
+    background-position:bottom;
+    position: relative;
+}
+
+.sub_visual:before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.sub_visual .title{
+    width: 100%;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color:#fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.sub_visual .title h2{
+    width: 100%;
+    font-size:30px;
+}
+
+/* board */
+
+#board{
+    padding-top: 160px;
+}
+
+.board{
+    display: flex;
+    flex-direction: column;
+}
+
+.board .board_img{
+    height: 500px;
+    width: 100%;
+}
+
+.board .board_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.board .cheer_txt{
+    background-color: #111836;
+    color:#fff;
+    font-size:50px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.board .board_form{
+    width: 900px;
+    margin:0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.board .board_form select{
+    border:1px solid #cfcfcf;
+    width: 120px;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.board .board_form input{
+    border:1px solid #cfcfcf;
+    width: 200px;
+    padding: 10px;
+}
+.board .board_form .board_search{
+    background-color: black;
+    color:#fff;
+    width: 40px;
+    height: 38px;
+    margin-left: -4px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.board .board_form .board_search:hover{
+    color:#e0e721;
+}
+
+.board .board_form .free_board{
+    margin-top:30px;
+}
+
+.board .board_form .free_board table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    border:1px solid #cfcfcf;
+    box-sizing: border-box;
+}
+
+.board .board_form .free_board th{
+    background-color:#111836;
+    color:#fff;
+    padding: 15px;
+    font-size:16px;
+}
+
+.board .board_form .free_board td{
+    padding: 15px;
+    border-bottom: 1px solid #cfcfcf;
+    box-sizing: border-box;
+    font-size:14px;
+}
+
+
+.board .board_form .free_board td a{
+    display: block;
+}
+
+.board .board_form  .board_write{
+   float:right;
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color:#111836;
+    color:#fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size:14px;
+}
+
+.board .board_form .board_write:hover{
+    color:#e0e721; 
+}
+
+.board .pager{
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.board .pager a{
+margin-left: 10px;
+}
+
+.board .pager a.double_left{
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+    background-color:#111836;
+    color:#fff;
+    line-height: 30px;
+    text-align: center;
+}
+
+.board .pager a.one_left{
+    width: 30px;
+    height: 30px;
+    background-color:#111836;
+    color:#fff;
+    line-height: 30px;
+    text-align: center;
+}
+
+.board .pager a.one_right{
+    width: 30px;
+    height: 30px;
+    background-color:#111836;
+    color:#fff;
+    line-height: 30px;
+    text-align: center; 
+}
+
+.board .pager a.double_right{
+    width: 30px;
+    height: 30px;
+    background-color:#111836;
+    color:#fff;
+    line-height: 30px;
+    text-align: center; 
+}
+
+
+.board .pager ul li{
+    display: inline-block;
+}
+
+.board .pager ul li:hover a{
+    text-decoration: underline;
+}
+
+.board .pager ul li a{
+    display: block;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-size:14px;
+}
+
+
+@media (max-width:960px){
+    #sub_visual{
+        top:112px;
+    }
+    
+    .board .board_form{
+        width: 100%;
+    }
+    
+    .board .free_board{
+        width: 100%;
+    }
+    .board .pager{
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
+ 
+}
+
+@media (max-width:600px){
+    footer{
+        padding-top: 60px;
+    }
+    
+    .board .cheer_txt{
+        font-size:40px;
+    }
+    
+    .board .board_form input{
+        width: 150px;
+    }
+    .board .board_form select{
+        font-size:12px;
+    }
+    .board .board_form .board_search{
+        font-size:12px;
+    }
+     .board .board_form .free_board th{
+        font-size:12px;
+        padding: 15px 4px 15px 4px;
+    }
+    
+    .board .board_form .free_board td{
+        padding: 15px 4px 15px 4px;
+        font-size:12px;
+    }
+    
+    .board .board_form .board_write{
+        float:none;
+        font-size:12px;
+        width: 110px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .board .pager ul li a{
+        font-size:12px;
+    }
+    .board .pager ul li:nth-child(7){
+        display: none;
+    }
+    
+    .board .pager ul li:nth-child(8){
+        display: none;
+    }
+    .board .pager ul li:nth-child(9){
+        display: none;
+    }
+    .board .pager ul li:nth-child(10){
+        display: none;
+    }
+}

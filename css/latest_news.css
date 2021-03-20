@@ -1,0 +1,147 @@
+#sub_visual{
+    position: relative;
+    top:100px;
+    height: 150px;
+}
+
+.sub_visual{
+    height: 100%;
+    background:url(../img/news_section.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+    position: relative;
+}
+
+.sub_visual:before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.sub_visual .title{
+    width: 100%;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color:#fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.sub_visual .title h2{
+    width: 100%;
+    font-size:30px;
+}
+
+/*latest_news */
+#latest_news{
+    padding-top: 160px;
+}
+
+.latest_news{
+    padding: 20px 6%;
+    columns:3;
+    column-gap: 20px;
+}
+
+
+.latest_news .latest_info{
+    break-inside: avoid;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-color: #f1f3f5;
+    padding:20px 12px 20px 12px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+
+.latest_news .latest_info>a{
+    display: block;
+    overflow: hidden;
+}
+
+.latest_news .latest_info>a:hover img{
+    transform: scale(1.02);
+}
+
+.latest_news .latest_info>a img{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.latest_news .info_title{
+    font-size:18px;
+    margin:10px 0;
+}
+
+.latest_news .info_title span{
+    display: block;
+    font-size:12px;
+    color:crimson;
+    vertical-align: 1px;
+    margin-bottom: 10px;
+}
+
+
+.latest_news .info_title:hover a{
+    text-decoration: underline;
+}
+
+
+.latest_news .info_title a{
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.latest_news .info_tag ul{
+    margin-bottom: 10px;
+}
+
+.latest_news .info_tag ul li{
+    display: inline-block;
+}
+
+.latest_news .info_tag ul li:hover a{
+    text-decoration: underline;
+}
+
+.latest_news .info_tag ul li a{
+    display: block;
+    font-size:14px;
+    color:deepskyblue;
+    transition: all 0.3s ease;
+}
+
+.latest_news .time{
+    float:right;
+    font-size:14px;
+}
+
+
+
+@media (max-width:960px){
+    #sub_visual{
+        top:112px;
+    }
+    
+    .latest_news{
+        columns:2;
+    }
+}
+
+
+@media (max-width:600px){
+    #sub_visual{
+        top:112px;
+    }
+    
+    .latest_news{
+        columns:1;
+        padding:10px;
+    }
+}

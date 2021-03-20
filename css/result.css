@@ -1,0 +1,274 @@
+#sub_visual {
+    position: relative;
+    top: 100px;
+    height: 150px;
+}
+
+.sub_visual {
+    height: 100%;
+    background: url(../img/result.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+
+.sub_visual:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.sub_visual .title {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.sub_visual .title h2 {
+    width: 100%;
+    font-size: 30px;
+}
+
+/* result*/
+
+#result {
+    padding-top: 160px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.result .result_form {
+    width: 100%;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result .result_form form {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.result .select_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.result .select_wrap label{
+    margin-right: 5px;
+    line-height: 40px;
+    font-size:16px;
+}
+
+.result .select_wrap select{
+    margin-right: 20px;
+    outline: none;
+    width: 240px;
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    letter-spacing: 1.2px;
+    border:none;
+    outline: none;
+    border:1px solid #cfcfcf;
+    font-size:14px;
+}
+
+.result .match_date {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.result .match_date  h2 .previous_month,.result .match_date  h2 .next_month{
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.result .league{
+    display: block;
+}
+
+.result .uefa{
+    display: none;
+}
+
+.result .facup{
+    display:none;
+}
+
+.result .carling{
+    display: none;
+}
+
+
+.result .match .match_info {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.result .match .match_info.oct{
+    display: none;
+}
+
+.result .match .match_info.nov{
+    display: none;
+}
+
+.result .match .match_info.dec{
+    display: none;
+}
+
+.result .match .match_info.jan{
+    display: none;
+}
+
+.result .match .match_info.feb{
+    display: none;
+}
+
+
+.result .match .match_info .info {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.result .match .match_info .info:before{
+    content:'H';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color:#111836;
+    color:#fff;
+    font-size:12px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.result .match .match_info .info.away:before{
+    content:'A';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color:skyblue;
+    color:#000;
+    font-size:12px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.result .match .match_info .info .top {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.result .match .match_info .info .top>div {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 33.33%;
+}
+
+.result .match .match_info .info .top>div .team_name{
+    width:50%;
+    text-align: center;
+}
+
+
+.result .match .match_info .info .top>div img{
+    width:50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.result .match .match_info .info .top>div.left img{
+    margin-left: 10px;
+}
+.result .match .match_info .info .top>div.right img{
+    margin-right: 10px;
+}
+
+
+
+.result .match .match_info .info .top .middle .score{
+    font-size:25px;
+    
+}
+
+
+
+@media (max-width:960px) {
+    #sub_visual {
+        top: 112px;
+    }
+}
+
+
+@media (max-width:768px) {
+    .result .select_wrap select{
+        width: 200px;
+    }
+}
+
+
+
+@media (max-width:600px) {
+    .result{
+        padding-bottom: 60px;
+    }
+    .result .result_form{
+        margin-bottom: 40px;
+    }
+    .result .select_wrap{
+        flex-wrap: wrap;
+    }
+    .result .select_wrap label{
+        margin-right: 0;
+    }
+    .result .select_wrap select{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .result .match .match_info {
+        width: 100%;
+    }
+    .result .match .match_info .info .top>div img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    
+}

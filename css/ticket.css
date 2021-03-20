@@ -1,0 +1,189 @@
+#sub_visual{
+    position: relative;
+    top:100px;
+    height: 150px;
+}
+
+.sub_visual{
+    height: 100%;
+    background:url(../img/ticket.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+    position: relative;
+}
+
+.sub_visual:before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+
+.sub_visual .title{
+    width: 100%;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color:#fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.sub_visual .title h2{
+    width: 100%;
+    font-size:30px;
+}
+
+
+/* tickey */
+
+#ticket{
+    padding-top: 160px;
+}
+
+#ticket .ticket_all h2{
+    text-align: center;
+    margin:20px 0;
+}
+
+#ticket .ticket_all h2:first-child{
+    margin-top: 0;
+}
+
+#ticket .ticketing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#ticket .ticketing:last-child{
+    margin-bottom: 0;
+}
+
+#ticket .ticketing .ticket_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:23%;
+    margin:2%;
+    background-color: #eef0f1;
+    padding-top:15px;
+    box-sizing: border-box;
+    border-radius:0 40px 0 0;
+    min-width: 226px;
+    position: relative;
+}
+
+#ticket .ticketing .ticket_box:before{
+    content:'H';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color:#fff;
+    background-color:#111836;
+}
+
+#ticket .ticketing .ticket_box.away:before{
+    content:'A';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color:#fff;
+    background-color:skyblue;
+}
+
+
+#ticket .ticketing .ticket_box .day{
+    font-size:14px;
+}
+
+#ticket .ticketing .ticket_box strong{
+    display: block;
+    margin: 10px 0;
+}
+
+#ticket .ticketing .ticket_box .opponent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:20px 0;
+}
+
+#ticket .ticketing .ticket_box .opponent img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+#ticket .ticketing .ticket_box .opponent>span{
+    margin:0 10px;
+}
+
+
+#ticket .ticketing .ticket_box .opponent .team_n{
+    display: block;
+    margin-top: 5px;
+    font-size:14px;
+}
+
+#ticket .ticketing .ticket_box p{
+    font-size:16px;
+}
+
+#ticket .ticketing .ticket_box .ticket_buy{
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color:#111836;
+    color:#fff;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size:14px;
+    transition: all 0.3s ease;
+}
+
+#ticket .ticketing .ticket_box .ticket_buy:hover{
+   color:#e0e721;
+}
+
+@media (max-width:960px){
+    #sub_visual{
+        top:112px;
+    }
+    #ticket .ticketing{
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width:600px){
+    #ticket{
+        padding-bottom: 60px;
+    }
+    #ticket .ticketing .ticket_box{
+        width: 100%;
+        margin:15px;
+    }
+}
+
+
+

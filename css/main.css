@@ -1,0 +1,713 @@
+
+/* visual */
+
+#visual {
+    position: relative;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 560px;
+    z-index: 1;
+}
+
+#visual .visual {
+    background: url(../img/visual.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 100%;
+    max-height: 560px;
+    position: relative;
+}
+
+#visual .visual:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#visual .visual h2 {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    color: #fff;
+    font-size: 4rem;
+}
+
+
+/* 경기일정 */
+
+#next_match {
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.match {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.match h2 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: rgb(112, 117, 122);
+}
+
+.match .next {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.match .next ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.match .next ul li .team_name {
+    font-size: 14px;
+}
+
+.match .next ul img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.match .next .day {
+    text-align: center;
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+.match .next .day .time {
+    display: block;
+    margin-top: 5px;
+}
+
+.controls {
+    position: relative;
+    height: 20px;
+}
+
+#prev {
+    position: absolute;
+    right: 50%;
+    margin-right: 20px;
+}
+
+#next {
+    position: absolute;
+    left: 50%;
+    margin-left: 20px;
+}
+
+
+#prev,
+#next {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+#prev img,
+#next img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* main */
+
+main{
+    padding-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+main .team_info{
+    display: flex;
+    flex-direction: row;
+}
+
+main .team_info .left{
+    flex-basis: 30%;
+}
+
+.team_info .left table{
+    width: 100%;
+    text-align: center;
+}
+
+.team_info .left table thead{
+    width: 100%;
+   
+}
+.team_info .left table thead>tr{
+    background-color: rgb(238, 239, 244);
+}
+
+.team_info .left table thead>tr th{
+    padding: 10px;
+    box-sizing: border-box;
+    font-size:14px;
+}
+
+.team_info .left table td{
+    padding: 10px;
+    font-size:14px;
+}
+
+.team_info .left table tbody>tr{
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.team_info .left table tbody>tr.my_team{
+  background: linear-gradient(to right,#22c1c3,#fdbb2d);
+    color:#fff;
+}
+
+
+.team_info .left table tbody>tr td span{
+    margin-left: 5px;
+    vertical-align: 1px;
+}
+
+.team_info .left table tbody>tr td span.up i{
+    color:green;
+    font-size:5px;
+    vertical-align: 1px;
+}
+
+.team_info .left table tbody>tr td span.down i{
+    color:red;
+    font-size:5px;
+}
+
+.team_info .left table tbody  .club_img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.team_info .left table tbody  .club_img img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+main .team_info .right{
+    flex-basis: 66%;
+    margin-left: 4%;
+}
+
+main .team_info .right .latest_news{
+    padding: 0  0 20px 0;
+    box-sizing: border-box;
+}
+
+main .team_info .right .latest_news h2{
+    font-size:20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+main .team_info .right .latest_news h2 a{
+    position: absolute;
+    right:0;
+    top:5px;
+    font-size:12px;
+}
+
+main .team_info .right .latest_news .news_box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+main .team_info .right .latest_news .news_box .item{
+    flex-basis: 49%;
+    margin: 2% 2% 2% 0;
+}
+
+main .team_info .right .latest_news .news_box .item:nth-child(2){
+    margin-right: 0;
+}
+
+main .team_info .right .latest_news .news_box .item:nth-child(4){
+    margin-right: 0;
+}
+
+main .team_info .right .latest_news .news_box .item a{
+    display: block;
+    width: 100%;
+}
+
+
+main .team_info .right .latest_news .news_box .item img{
+    width: 100%;
+    height: 202px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+main .team_info .right .latest_news .news_box .item span{
+    font-size:16px;
+    transition: all 0.3s ease;
+}
+
+main .team_info .right .latest_news .news_box .item:hover img,
+main .team_info .right .latest_news .news_box .item:hover span{
+    text-decoration: underline;
+    transform: scale(1.02);
+}
+main .team_info .right .latest_video{
+    padding: 20px 0 20px 0;
+    box-sizing: border-box;
+}
+
+main .team_info .right .latest_video[poster]{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .team_info .right .latest_video h2{
+    font-size:20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+main .team_info .right .latest_video h2 a{
+    position: absolute;
+    right:0;
+    top:5px;
+    font-size:12px;
+}
+
+main .team_info .right .latest_video .video_box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .team_info .right .latest_video .video_box .video_item{
+    width:49%;
+    height:210px;
+    margin:2% 2% 0 0;
+    outline: none;
+    position: relative;
+}
+
+
+main .team_info .right .latest_video .video_box .video_item:last-child{
+    margin-right: 0;
+}
+
+main .team_info .right .latest_video .video_box .video_item .video_txt{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0,0,0,0.8);
+    color:#fff;
+    box-sizing: border-box;
+    font-size:14px;
+    opacity: 0;
+    padding-left: 10px;
+    line-height: 40px;
+    transition: all 0.3s ease;
+}
+
+main .team_info .right .latest_video .video_box .video_item:hover .video_txt{
+    opacity: 1;
+}
+
+main .team_info .right .latest_video .video_box .video_item video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+main .team_info .right .latest_video .video_box video:last-child{
+    margin-right: 0;
+}
+
+
+/* banner */
+
+main .banner{
+    margin: 60px 0;    
+    width: 100%;
+    height: 200px;
+    background:url(../img/banner.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color:#fff;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+main .banner:before{
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+main .banner p{
+    margin: 20px 0 20px;
+    font-size:16px;
+}
+
+main .banner a{
+    display: block;
+    transition: all 0.3s ease;
+}
+
+main .banner a:hover{
+    color:#e0e721;
+}
+
+/* uniform */
+
+
+main .uniform h2{
+    font-size:20px;
+    margin-bottom: 30px;
+}
+
+main .uniform .flip{
+    display: flex;
+    justify-content: space-between;
+}
+
+main .uniform .flip .flip_card{
+    width: 31.33%;
+    margin:1%;
+    height:300px;
+}
+
+main .uniform .flip .flip_card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+main .uniform .flip .flip_card .flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+main .uniform .flip .flip_card .flip-card-inner .card_front,
+main .uniform .flip .flip_card .flip-card-inner .card_back{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+main .uniform .flip .flip_card .flip-card-inner .card_front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+main .uniform .flip .flip_card .flip-card-inner .card_back{
+    transform: rotateY(180deg);
+}
+
+main .uniform .flip .flip_card .flip-card-inner .card_back .back_header{
+    height:60%;
+}
+main .uniform .flip .flip_card .flip-card-inner .card_back .back_header img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+main .uniform .flip .flip_card .flip-card-inner .card_back .back_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:40%;
+    text-align: center;
+    background-color:#111836;
+    color:#fff;
+}
+
+
+main .uniform .flip .flip_card .flip-card-inner .card_back .back_footer h3{
+    font-size:16px;
+    width: 100%;
+}
+
+main .uniform .flip .flip_card .flip-card-inner .card_back .back_footer p{
+    width: 100%;
+    font-size:14px;
+    margin: 15px 0;
+}
+main .uniform .flip .flip_card .flip-card-inner .card_back .back_footer a{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+    font-size:14px;
+    transition: all 0.3s ease;
+}
+
+main .uniform .flip .flip_card .flip-card-inner .card_back .back_footer a:hover{
+    color:#e0e721;
+}
+
+
+/* top_btn */
+
+.top_btn{
+    display: none;
+    opacity: 0;
+    position: fixed;
+    right:10px;
+    bottom:30px;
+    width: 30px;
+    height: 30px;
+    background-color:#e0e721;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#000;
+    font-size:15px;
+    z-index: 10;
+}
+
+
+.top_btn.active{
+    color:#fff;
+}
+
+.top_btn i{
+    display: block;
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+@media (max-width:1200px) {
+    
+    /* main */
+    main .team_info{
+        flex-wrap: wrap;
+    }
+    
+    main .team_info .left{
+        flex-basis: 90%;
+        margin:0 auto;
+        margin-bottom: 60px;
+    }
+    
+    main .team_info .right{
+        flex-basis: 100%;
+        margin-left: 0;
+    }
+    
+    main .team_info .right .latest_news .news_box .item img{
+        height:300px;
+    }
+    
+    main .team_info .right .latest_video{
+        padding:40px 0 20px 0;
+    }
+    
+    main .team_info .right .latest_video .video_box .video_item{
+        height: 300px;
+    }
+}
+
+
+@media (max-width:960px) {
+
+    /* visual */
+    #visual {
+        top: 113px;
+    }
+
+    /*match */
+
+    #next_match {
+        padding-top: 112px;
+    }
+    
+    /*main*/
+    main .team_info .right .latest_video .video_box .video_item{
+        width: 100%;
+        height:auto;
+        margin-right: 0;
+    }
+    
+    /* main > banner */
+    
+    main .banner h2{
+        font-size:20px;
+    }
+    
+
+
+
+}
+
+@media (max-width:768px) {
+
+    /* visual */
+    #visual .visual h2 {
+        font-size: 2.5rem;
+    }
+    
+    /*main */
+    main .team_info .right .latest_news h2{
+        font-size:18px;
+    }
+    main .team_info .right .latest_news .news_box .item span{
+        font-size:14px;
+    }
+    
+    main .team_info .right .latest_video h2{
+        font-size:18px;
+    }
+    main .team_info .right .latest_video .video_box .video_item .video_txt{
+        font-size:12px;
+    }
+    
+    /* main > banner */
+    main .banner h2{
+        font-size:16px;
+    }
+    main .banner p{
+        font-size:14px;
+    }
+    main .banner a{
+        font-size:12px;
+    }
+    
+    /*main uniform */
+    main .uniform h2{
+        font-size:18px;
+    }
+    main .uniform .flip{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    main .uniform .flip .flip_card{
+        width:48%;
+    }
+    
+    main .uniform .flip .flip_card .flip-card-inner .card_back .back_footer h3{
+        font-size:14px;
+    }
+    
+    main .uniform .flip .flip_card .flip-card-inner .card_back .back_footer p{
+        font-size:12px;
+    }
+    main .uniform .flip .flip_card .flip-card-inner .card_back .back_footer a{
+        font-size:12px;
+    }
+    
+}
+
+@media(max-width:600px) {
+
+    /* visual */
+    #visual {
+        top: 112px;
+    }
+
+    #visual .visual h2 {
+        font-size: 2.0rem;
+    }
+    
+    /*main */
+    .team_info .left table thead>tr th{
+        padding: 9px;
+        font-size:14px;
+    }
+    .team_info .left table td{
+        font-size:12px;
+        padding: 9px;
+    }
+    main .team_info .left{
+        flex-basis: 100%;
+    }
+    main .team_info .right .latest_news{
+        padding: 0;
+    }
+    main .team_info .right .latest_news .news_box .item{
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+    main .team_info .right .latest_video{
+        padding: 0;
+        margin-top:60px;
+    }
+    
+    /* main > banner */
+    main .banner p{
+        font-size:12px;
+    }
+    
+    
+    /*main uniform */
+    
+    main .uniform .flip .flip_card{
+        width:100%;
+        margin: 0;
+        margin-bottom: 60px;
+    }
+    
+    
+}
+

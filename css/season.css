@@ -1,0 +1,241 @@
+#sub_visual{
+    position: relative;
+    top:100px;
+    height: 150px;
+}
+
+.sub_visual{
+    height: 100%;
+    background:url(../img/ticket.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+    position: relative;
+}
+
+.sub_visual:before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+
+.sub_visual .title{
+    width: 100%;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color:#fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.sub_visual .title h2{
+    width: 100%;
+    font-size:30px;
+}
+
+/* seanson */
+
+#season{
+    padding-top: 160px;
+}
+
+.season .membership{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.season .membership h2{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.season .membership h2:before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:-4px;
+    width: 100px;
+    height: 1px;
+    background-color:#e0e721;
+}
+
+.season .membership p {
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.season .membership p span{
+    display: block;
+}
+
+.season .membership h3{
+    margin-bottom:10px;
+}
+
+.season .membership h3 i{
+    color:#111836;
+    margin-left: 5px;
+}
+
+.season .membership ul{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.season .membership li{
+    margin:10px;
+}
+.season .membership .price{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.season .membership .price .price_tag{
+    width:16%;
+    padding: 10px;
+    min-width: 200px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.season .membership .price .price_tag img{
+    display: block;
+    width:100%;
+    height:97px;
+    object-fit:cover;
+}
+
+.season .membership .price .price_tag p span{
+    display: block;
+    margin:10px 0;
+}
+
+.season .membership .price .price_tag>p{
+    margin-bottom: 15px;
+    font-size:16px;
+}
+
+.season .membership .price .price_tag>span{
+    display: block;
+    font-weight: bold;
+    font-size:20px;
+}
+
+.season .membership .price .price_tag>a{
+    margin-top: 15px;
+    font-size:14px;
+    background-color:#111836;
+    color:#fff;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.season .membership .price .price_tag>a:hover{
+    color:#e0e721;
+}
+
+.season  .s_ticket{
+    width:700px;
+    height: 137px;
+    margin:50px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.season  .s_ticket .season_img{
+    width: 60%;
+}
+
+.season  .s_ticket .season_img img{
+    width: 100%;
+    height: 136px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.season  .s_ticket .s_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 40%;
+    background-color: #eef0f1;
+}
+
+.season  .s_ticket .s_text p{
+    display: block;
+    margin-bottom: 15px;
+}
+.season  .s_ticket .s_text a{
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin:0 auto;
+    box-sizing: border-box;
+    line-height:30px;
+    text-align: center;
+    background-color: #111836;
+    color:#fff;
+    font-size:14px;
+    transition: all 0.3s ease;
+}
+
+.season  .s_ticket .s_text a:hover{
+    color:#e0e721;
+}
+
+
+@media (max-width:960px){
+    #sub_visual{
+        top:112px;
+    }
+}
+
+@media (max-width:768px){
+    .season .s_ticket{
+        width: 100%;
+    }
+}
+
+@media (max-width:600px){
+    #season{
+        padding-bottom: 60px;
+    }
+    .season .membership .price .price_tag{
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .season .s_ticket{
+        width: 100%;
+        height:auto;
+        flex-wrap: wrap;
+    }
+    
+    .season .s_ticket .season_img{
+        width: 100%;
+    }
+    
+    .season .s_ticket .s_text{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}

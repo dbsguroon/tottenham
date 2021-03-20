@@ -1,0 +1,178 @@
+#sub_visual{
+    position: relative;
+    top:100px;
+    height: 150px;
+}
+
+.sub_visual{
+    height: 100%;
+    background:url(../img/team.jpg) no-repeat;
+    background-size:cover;
+    background-position: bottom;
+    position: relative;
+}
+
+.sub_visual:before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.sub_visual .title{
+    width: 100%;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color:#fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.sub_visual .title h2{
+    width: 100%;
+    font-size:30px;
+}
+
+#team{
+    padding-top: 160px;
+}
+
+#team .attacker{
+    padding-bottom: 60px;
+}
+
+
+#team .midfilder{
+    padding-bottom: 60px;
+}
+
+#team .defender{
+    padding-bottom: 60px;
+}
+
+#team .goalkeeper{
+    padding-bottom: 60px;
+}
+
+
+
+
+#team h2{
+    display: inline-block;
+    font-size:20px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#team h2:before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    width: 30px;
+    height: 1px;
+    background-color: yellow;
+}
+
+.teamplayer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.teamplayer .player{
+    width:23%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.teamplayer .player .player_img{
+    width: 100%;
+    height: 300px;
+}
+
+.teamplayer .player .player_img:hover + .info{
+        opacity: 1;
+}
+
+.teamplayer .player .player_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teamplayer .player .info{
+    opacity: 0;
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:25%;
+    background-color:rgba(0,0,0,0.8);
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.teamplayer .player .info strong{
+    font-size:16px;
+}
+
+.teamplayer .player .info .number{
+    display: block;
+    margin:10px 0;
+    font-size:14px;
+}
+
+.teamplayer .player .info p{
+    font-size:12px;
+}
+
+@media (max-width:1200px){
+    .teamplayer{
+        justify-content:space-around;
+    }
+    
+    .teamplayer .player{
+        min-width: 276px; 
+    }
+}
+
+
+@media (max-width:960px){
+    #sub_visual{
+        top:112px;
+    }
+}
+
+@media (max-width:600px){
+     .teamplayer{
+        justify-content:center;
+    }
+    
+    .teamplayer .player{
+        margin-right: 0;
+        margin-bottom: 20px;
+        width:70%;
+    }
+    
+    .teamplayer .player .player_img{
+        height:auto;
+    }
+    
+    
+}
